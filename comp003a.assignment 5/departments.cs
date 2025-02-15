@@ -21,4 +21,23 @@ namespace comp003a.assignment_5
             Console.WriteLine($"Details: {GetDepartmentDetails()}");
         }
     }
+
+    public class HRDepartment : department, IDepartmentOperations
+    {
+        public HRDepartment()
+        {
+            DepartmentName = "Human Resources";//sets the department name
+        }
+
+        public override string GetDepartmentDetails()
+        {
+            return "Handles employee reelations recruitment";
+        }
+
+        public void Operate()
+        {
+            Console.WriteLine("Performing HR operations");
+        }
+    }
+
 }
