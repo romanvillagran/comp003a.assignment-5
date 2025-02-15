@@ -102,7 +102,16 @@ namespace comp003a.assignment_5
             printFullName();
             Console.WriteLine($"Salary: {Salary}");
         }
-
-
+    }
+    /// <summary>
+    /// this prints employee detail 
+    /// </summary>
+    public class program
+    {
+        public static void Main(string[] args)
+        {
+            employee emp1 = new employee("0efwe9fi932lkwne23", "Alice", "Johnson", 75000, "Marie");
+            emp1.DisplayEmployeeInfo();
+        }
     }
 }
