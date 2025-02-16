@@ -9,13 +9,16 @@ namespace comp003a.assignment_5
 {
     internal class employee
     {
+        //private fields
         private string _employeeId;
         private string _firstName;
         private string _middleName;
         private string _lastName;
         private double _salary;
 
-
+        /// <summary>
+        /// gets the employee ID. 
+        /// </summary>
         public string EmployeeId
         {
             get { return _employeeId; }
@@ -29,7 +32,9 @@ namespace comp003a.assignment_5
             }
             
         }
-
+        /// <summary>
+        /// gets the first name.  
+        /// </summary>
         public string FirstName
         {
             get { return _firstName; } 
@@ -42,7 +47,9 @@ namespace comp003a.assignment_5
                 _firstName = value;
             }           
         }
-
+        /// <summary>
+        /// gets the middle name 
+        /// </summary>
         public string MiddleName
          { 
             get { return _middleName; }
@@ -50,7 +57,9 @@ namespace comp003a.assignment_5
                 _middleName = value ?? string.Empty; // Allow empty but not null
             }
         }
-
+        /// <summary>
+        /// gets the last name 
+        /// </summary>
         public string LastName
         {
             get { return _lastName; } 
@@ -62,7 +71,9 @@ namespace comp003a.assignment_5
                 _lastName = value;
             }
         }
-
+        /// <summary>
+        /// gets the salary
+        /// </summary>
         public double Salary
          {
             get { return _salary; } 
@@ -77,7 +88,15 @@ namespace comp003a.assignment_5
             }
         }
 
-        //this the constructor
+       
+        /// <summary>
+        /// this the constructor
+        /// </summary>
+        /// <param name="employeeId">emplyee is cannot be empty</param>
+        /// <param name="firstName">first name cannot be empty</param>
+        /// <param name="lastName">last name cannot be empty</param>
+        /// <param name="salary">salary cannot be equal or less than 0</param>
+        /// <param name="middleName">middle name cannot be empty</param>
         public employee(string employeeId, string firstName, string lastName, double salary, string middleName = "")
         {
             EmployeeId = employeeId;
@@ -87,7 +106,10 @@ namespace comp003a.assignment_5
             MiddleName = middleName;
         }
 
-        //prints the names 
+       
+        /// <summary>
+        /// prints the names 
+        /// </summary>
         public void printFullName()
         {
             Console.WriteLine($"First name: {FirstName}");
@@ -95,7 +117,10 @@ namespace comp003a.assignment_5
             Console.WriteLine($"Last Name: {LastName}");
         }
 
-        //this displays employee stuff like id and salary
+      
+        /// <summary>
+        /// this displays employee stuff like id and salary
+        /// </summary>
         public void DisplayEmployeeInfo()
         {
             Console.WriteLine($"Employee ID: {EmployeeId}");
