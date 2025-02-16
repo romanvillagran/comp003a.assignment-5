@@ -136,7 +136,21 @@ namespace comp003a.assignment_5
         public static void Main(string[] args)
         {
             employee emp1 = new employee("0efwe9fi932lkwne23", "Alice", "Johnson", 75000, "Marie");
-            emp1.DisplayEmployeeInfo();
+            emp1.DisplayEmployeeInfo();//displays enployee info
+
+            Console.WriteLine();//this is here to add a blank line 
+
+            HRDepartment hr = new HRDepartment();// makes HR department
+            ITDepartment it = new ITDepartment();// makes IT department
+
+            //displays department info
+            hr.DisplayDepartmentInfo();//displays hr department info
+            hr.Operate();//perform hr operations
+
+            Console.WriteLine();//blank line
+
+            it.DisplayDepartmentInfo();//displays it department info
+            it.Operate();//performs it operations
         }
     }
 }
