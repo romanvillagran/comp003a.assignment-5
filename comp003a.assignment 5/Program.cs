@@ -10,14 +10,15 @@ using System.Xml.Serialization;
 namespace comp003a.assignment_5
 {
 
-    public class program
+   
+    public class Program
     {
-     
+      
         public static void Main(string[] args)
         {
             try
             {
-                // Step 1: Create an employee
+                //Create an employee
                 Console.WriteLine("Enter Employee Details:");
                 Console.Write("Enter Employee ID: ");
                 string employeeId = Console.ReadLine();
@@ -35,15 +36,15 @@ namespace comp003a.assignment_5
                 double salary = Convert.ToDouble(Console.ReadLine());
 
                 // Create Employee instance
-                employee emp = new employee(employeeId, firstName, lastName, salary, middleName);
+                Employee emp = new Employee(employeeId, firstName, lastName, salary, middleName);
                 Console.WriteLine("\nEmployee Created Successfully!\n");
 
                 // Display employee info
                 emp.DisplayEmployeeInfo();
 
-                Console.WriteLine(); // Add a blank line for separation
+                Console.WriteLine(); //blank line
 
-                // Step 2: Create department instances
+                //Create department instances
                 HRDepartment hr = new HRDepartment(); // Create HR department
                 ITDepartment it = new ITDepartment(); // Create IT department
 
@@ -52,7 +53,7 @@ namespace comp003a.assignment_5
                 hr.DisplayDepartmentInfo(); // Display HR department info
                 hr.Operate(); // Perform HR operations
 
-                Console.WriteLine(); // Add a blank line for separation
+                Console.WriteLine(); // blank line 
 
                 it.DisplayDepartmentInfo(); // Display IT department info
                 it.Operate(); // Perform IT operations
